@@ -13,7 +13,7 @@ public class NumberProcessorTest {
 
     @Test
     public void testMin() {
-        String fileName = "C:\\Users\\Mi\\Documents\\input.txt";
+        String fileName = "testMin.txt";
         long[] numbers = NumberProcessor.getList(fileName);
         long minNumber = NumberProcessor.min(numbers);
         assertEquals(minNumber, 1);
@@ -21,7 +21,7 @@ public class NumberProcessorTest {
 
     @Test
     public void testMax() {
-        String fileName = "C:\\Users\\Mi\\Documents\\input.txt";
+        String fileName = "testMax.txt";
         long[] numbers = NumberProcessor.getList(fileName);
         long maxNumber = NumberProcessor.max(numbers);
         assertEquals(maxNumber, 10);
@@ -29,7 +29,7 @@ public class NumberProcessorTest {
 
     @Test
     public void testSum() {
-        String fileName = "C:\\Users\\Mi\\Documents\\input.txt";
+        String fileName = "testSum.txt";
         long[] numbers = NumberProcessor.getList(fileName);
         long sumNumber = NumberProcessor.sum(numbers);
         assertEquals(sumNumber, 55);
@@ -37,7 +37,7 @@ public class NumberProcessorTest {
 
     @Test
     public void testMult() {
-        String fileName = "C:\\Users\\Mi\\Documents\\input.txt";
+        String fileName = "testMult.txt";
         long[] numbers = NumberProcessor.getList(fileName);
         long multNumber = NumberProcessor.mult(numbers);
         assertEquals(multNumber, 3628800);
@@ -46,7 +46,7 @@ public class NumberProcessorTest {
     @Test
     public void testMinTime() {
         long t1 = System.nanoTime();
-        String fileName = "C:\\Users\\Mi\\Documents\\input.txt";
+        String fileName = "testMin.txt";
         long[] numbers = NumberProcessor.getList(fileName);
         long minNumber = NumberProcessor.min(numbers);
         long t2 = System.nanoTime();
@@ -56,7 +56,7 @@ public class NumberProcessorTest {
     @Test
     public void testMaxTime() {
         long t1 = System.nanoTime();
-        String fileName = "C:\\Users\\Mi\\Documents\\input.txt";
+        String fileName = "testMax.txt";
         long[] numbers = NumberProcessor.getList(fileName);
         long maxNumber = NumberProcessor.max(numbers);
         long t2 = System.nanoTime();
@@ -66,7 +66,7 @@ public class NumberProcessorTest {
     @Test
     public void testSumTime() {
         long t1 = System.nanoTime();
-        String fileName = "C:\\Users\\Mi\\Documents\\input.txt";
+        String fileName = "testSum.txt";
         long[] numbers = NumberProcessor.getList(fileName);
         long sumNumber = NumberProcessor.sum(numbers);
         long t2 = System.nanoTime();
@@ -76,7 +76,7 @@ public class NumberProcessorTest {
     @Test
     public void testMultTime() {
         long t1 = System.nanoTime();
-        String fileName = "C:\\Users\\Mi\\Documents\\input.txt";
+        String fileName = "testMult.txt";
         long[] numbers = NumberProcessor.getList(fileName);
         long multNumber = NumberProcessor.mult(numbers);
         long t2 = System.nanoTime();
@@ -85,7 +85,7 @@ public class NumberProcessorTest {
 
     @Test
     public void testTimeout() {
-        String fileName = "C:\\Users\\Mi\\Documents\\input.txt";
+        String fileName = "testMin.txt";
         assertTimeout(ofMillis(200), () -> {
             Thread.sleep(100);
         });
