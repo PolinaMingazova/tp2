@@ -35,7 +35,7 @@ jobs:
       if: success()
       uses: appleboy/telegram-action@master
       with:
-        to: ${{ secrets.1216361210 }}
+        to: ${{ secrets.mingazovap }}
         token: ${{ secrets.TELEGRAM_TOKEN }}
         message: "Tests passed successfully! Good job!"
       env:
@@ -44,7 +44,7 @@ jobs:
       if: failure()
       uses: appleboy/telegram-action@master
       with:
-        to: ${{ secrets.1216361210 }}
+        to: ${{ secrets.mingazovap }}
         token: ${{ secrets.TELEGRAM_TOKEN }}
         message: "Tests failed! Check the details."
       env:
