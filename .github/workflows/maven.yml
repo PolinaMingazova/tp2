@@ -35,20 +35,20 @@ jobs:
       if: success()
       uses: appleboy/telegram-action@master
       with:
-        to: ${{ secrets.mingazovap }}
+        to: ${{ secrets.1216361210 }}
         token: ${{ secrets.TELEGRAM_TOKEN }}
         message: "Tests passed successfully! Good job!"
       env:
-        TELEGRAM_TOKEN: ${{ secrets.TP_PM_bot }}
+        TELEGRAM_TOKEN: ${{ secrets.7101137625:AAHoreZ08kvNOp0p4Kf3c1P4FJ8SD7sfJyA }}
     - name: Notify on Telegram
       if: failure()
       uses: appleboy/telegram-action@master
       with:
-        to: ${{ secrets.mingazovap }}
+        to: ${{ secrets.1216361210 }}
         token: ${{ secrets.TELEGRAM_TOKEN }}
         message: "Tests failed! Check the details."
       env:
-        TELEGRAM_TOKEN: ${{ secrets.TP_PM_bot }}
+        TELEGRAM_TOKEN: ${{ secrets.7101137625:AAHoreZ08kvNOp0p4Kf3c1P4FJ8SD7sfJyA }}
 
     # Optional: Uploads the full dependency graph to GitHub to improve the quality of Dependabot alerts this repository can receive
     - name: Update dependency graph
