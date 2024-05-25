@@ -35,8 +35,8 @@ jobs:
       if: failure()
       uses: appleboy/telegram-action@master
       with:
-        to: ${{ secrets.TELEGRAM_TO }}
-        token: ${{ secrets.1216361210 }}
+        to: ${{ secrets.1216361210 }}
+        token: ${{ secrets.TELEGRAM_TOKEN }}
         message: "Tests failed! Check the details."
       env:
         TELEGRAM_TOKEN: ${{ secrets.7101137625:AAHoreZ08kvNOp0p4Kf3c1P4FJ8SD7sfJyA }}
