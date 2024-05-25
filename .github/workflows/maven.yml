@@ -31,6 +31,15 @@ jobs:
       run: mvn -B package --file pom.xml
     - name: Run tests
       run: mvn -B test
+    - name: Notify on Telegram - Success
+      if: success()
+      uses: appleboy/telegram-action@master
+      with:
+        to: ${{ secrets.mingazovap }}
+        token: ${{ secrets.TELEGRAM_TOKEN }}
+        message: "Tests passed successfully! Good job!"
+      env:
+        TELEGRAM_TOKEN: ${{ secrets.TP_PM_bot }}
     - name: Notify on Telegram
       if: failure()
       uses: appleboy/telegram-action@master
