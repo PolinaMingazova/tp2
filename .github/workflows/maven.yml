@@ -18,6 +18,9 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
+    runs:
+        using: 'node20'
+        main: 'main.js'
 
     steps:
     - uses: actions/checkout@v4
@@ -39,7 +42,7 @@ jobs:
         token: ${{ secrets.TELEGRAM_TOKEN }}
         message: "Tests passed successfully! Good job!"
       env:
-        TELEGRAM_TOKEN: ${{ secrets.7101137625:AAHoreZ08kvNOp0p4Kf3c1P4FJ8SD7sfJyA }}
+        TELEGRAM_TOKEN: ${{ secrets.TP_PM_bot }}
     - name: Notify on Telegram
       if: failure()
       uses: appleboy/telegram-action@master
@@ -48,7 +51,7 @@ jobs:
         token: ${{ secrets.TELEGRAM_TOKEN }}
         message: "Tests failed! Check the details."
       env:
-        TELEGRAM_TOKEN: ${{ secrets.7101137625:AAHoreZ08kvNOp0p4Kf3c1P4FJ8SD7sfJyA }}
+        TELEGRAM_TOKEN: ${{ secrets.TP_PM_bot }}
 
     # Optional: Uploads the full dependency graph to GitHub to improve the quality of Dependabot alerts this repository can receive
     - name: Update dependency graph
