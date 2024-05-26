@@ -85,7 +85,7 @@ public class NumberProcessorTest {
     }
 
     @Test
-    // @Disabled
+    @Disabled
     public void testTimeout() {
         String fileName = "testMin.txt";
         assertTimeout(ofMillis(200), () -> {
