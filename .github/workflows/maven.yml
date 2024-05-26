@@ -21,10 +21,10 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
-    - name: Set up JDK 17
+    - name: Set up JDK 20
       uses: actions/setup-java@v4
       with:
-        java-version: '17'
+        java-version: '20'
         distribution: 'temurin'
         cache: maven
     - name: Build with Maven
@@ -36,15 +36,19 @@ jobs:
       uses: appleboy/telegram-action@master
       with:
         to: ${{ secrets.mingazovap }}
-        token: ${{ secrets.TP_PM_bot }}
+        token: ${{ secrets.TELEGRAM_TOKEN }}
         message: "Tests passed successfully! Good job!"
+      env:
+        TELEGRAM_TOKEN: ${{ secrets.TP_PM_bot }}
     - name: Notify on Telegram
       if: failure()
       uses: appleboy/telegram-action@master
       with:
         to: ${{ secrets.mingazovap }}
-        token: ${{ secrets.TP_PM_bot }}
+        token: ${{ secrets.TELEGRAM_TOKEN }}
         message: "Tests failed! Check the details."
+      env:
+        TELEGRAM_TOKEN: ${{ secrets.TP_PM_bot }}
 
     # Optional: Uploads the full dependency graph to GitHub to improve the quality of Dependabot alerts this repository can receive
     - name: Update dependency graph
