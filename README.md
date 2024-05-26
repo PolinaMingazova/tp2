@@ -12,3 +12,5 @@
 
 ## График зависимости для функции *min*
 
+[Image](https://github.com/PolinaMingazova/tp2/blob/main/2024-05-26_16-08-31.png)
+
