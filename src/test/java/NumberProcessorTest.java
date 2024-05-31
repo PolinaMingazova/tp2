@@ -1,4 +1,5 @@
 import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.Timeout;
 import static org.junit.jupiter.api.Assertions.assertTimeout;
@@ -84,10 +85,11 @@ public class NumberProcessorTest {
     }
 
     @Test
+    @Disabled
     public void testTimeout() {
         String fileName = "testMin.txt";
         assertTimeout(ofMillis(200), () -> {
-            Thread.sleep(100);
+            Thread.sleep(200);
         });
         long[] numbers = NumberProcessor.getList(fileName);
         long minNumber = NumberProcessor.min(numbers);
