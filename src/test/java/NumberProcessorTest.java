@@ -2,12 +2,11 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.Timeout;
-import static org.junit.jupiter.api.Assertions.assertTimeout;
+
 import static java.time.Duration.ofMillis;
+import static org.junit.jupiter.api.Assertions.*;
 
 import java.util.concurrent.TimeUnit;
-
-import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @Timeout(value = 200, unit = TimeUnit.MILLISECONDS)
 public class NumberProcessorTest {
@@ -99,4 +98,12 @@ public class NumberProcessorTest {
 
     }
 
+    @Test
+    public void testException() {
+        String fileName = "testMin.txt";
+        long[] numbers = NumberProcessor.getList(fileName);
+        assertThrows(ArithmeticException.class, () -> {
+            long multNumber = NumberProcessor.mult(numbers);
+        });
+    }
 }
