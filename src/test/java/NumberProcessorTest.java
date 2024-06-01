@@ -44,46 +44,6 @@ public class NumberProcessorTest {
     }
 
     @Test
-    public void testMinTime() {
-        long t1 = System.nanoTime();
-        String fileName = "testMin.txt";
-        long[] numbers = NumberProcessor.getList(fileName);
-        long minNumber = NumberProcessor.min(numbers);
-        long t2 = System.nanoTime();
-        System.out.println("MinTime: " + (t2 - t1));
-    }
-
-    @Test
-    public void testMaxTime() {
-        long t1 = System.nanoTime();
-        String fileName = "testMax.txt";
-        long[] numbers = NumberProcessor.getList(fileName);
-        long maxNumber = NumberProcessor.max(numbers);
-        long t2 = System.nanoTime();
-        System.out.println("MaxTime: " + (t2 - t1));
-    }
-
-    @Test
-    public void testSumTime() {
-        long t1 = System.nanoTime();
-        String fileName = "testSum.txt";
-        long[] numbers = NumberProcessor.getList(fileName);
-        long sumNumber = NumberProcessor.sum(numbers);
-        long t2 = System.nanoTime();
-        System.out.println("SumTime: " + (t2 - t1));
-    }
-
-    @Test
-    public void testMultTime() {
-        long t1 = System.nanoTime();
-        String fileName = "testMult.txt";
-        long[] numbers = NumberProcessor.getList(fileName);
-        long multNumber = NumberProcessor.mult(numbers);
-        long t2 = System.nanoTime();
-        System.out.println("MultTime: " + (t2 - t1));
-    }
-
-    @Test
     @Disabled
     public void testTimeout() {
         String fileName = "testMin.txt";
