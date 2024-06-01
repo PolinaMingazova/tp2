@@ -36,41 +36,52 @@ public class NumberProcessor {
         }
         return numbers;
     }
-
-
+        
     public static long min(long[] numbers) {
+        long t1 = System.nanoTime();
         long min = numbers[0];
         for (int i = 1; i < numbers.length; i++) {
             if (numbers[i] < min) {
                 min = numbers[i];
             }
         }
+        long t2 = System.nanoTime();
+        System.out.println("MinTime: " + (t2 - t1));
         return min;
     }
 
     public static long max(long[] numbers) {
+        long t1 = System.nanoTime();
         long max = numbers[0];
         for (int i = 1; i < numbers.length; i++) {
             if (numbers[i] > max) {
                 max = numbers[i];
             }
         }
+        long t2 = System.nanoTime();
+        System.out.println("MaxTime: " + (t2 - t1));
         return max;
     }
 
     public static long sum(long[] numbers) {
+        long t1 = System.nanoTime();
         long sum = 0;
         for (long number : numbers) {
             sum += number;
         }
+        long t2 = System.nanoTime();
+        System.out.println("SumTime: " + (t2 - t1));
         return sum;
     }
 
     public static long mult(long[] numbers) {
+        long t1 = System.nanoTime();
         long mult = 1;
         for (long number : numbers) {
             mult *= number;
         }
+        long t2 = System.nanoTime();
+        System.out.println("MultTime: " + (t2 - t1));
         return mult;
     }
 }
